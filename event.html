@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Create Event Form</title>
+</head>
+
+<body>
+
+    <div class="container" id="body">
+        <br>
+        <div class="jumbotron" id="jumbotron2">
+            <h1 class="text-center">Create Your Event</h1>
+        </div>
+        <br>
+        <br>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row" id="input">
+                <div class="col-sm-12">
+                   <div class="row">
+                       <div class="col-sm-11">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="eventName-input">Event Name</label>
+                            <input class="form-control" id="eventName-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="socialcause-input">Destination</label>
+                            <input class="form-control" id="social-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="time-input">Time</label>
+                            <input class="form-control" id="time-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="date-input">Date</label>
+                            <input class="form-control" id="date-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="location-input">Location</label>
+                            <input class="form-control" id="location-input" type="text">
+                        </div>
+
+                        <button class="btn btn-default" id="submit" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

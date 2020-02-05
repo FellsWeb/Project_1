@@ -1,0 +1,34 @@
+.jumbotron {
+    display: block;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    background: #ebebeb;
+    width: 750px;
+}
+
+#buttonsizer {
+    display: block;
+    margin: auto;
+    max-width: 750px;
+}
+
+#form-group {
+    margin-top: 15px;
+}
+
+#inputsizer {
+    margin-top: 25px;
+    display: block;
+    margin: auto;
+    max-width: 750px;
+    position: fixed;
+    left: 584px;
+}
+
+#results {
+    margin-top: 55px;
+    display: block;
+    margin: auto;
+    max-width: 750px;
+}

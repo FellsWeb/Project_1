@@ -1,0 +1,11 @@
+.jumbotron {
+background: #ebebeb;
+}
+
+#event-form {
+    /*align-content: center;
+    justify-content: center;*/
+    border: solid 2px rgb(158, 157, 161);
+    border-radius: 5px;
+}
+

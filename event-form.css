@@ -1,26 +1,29 @@
+* {
+    box-sizing: border-box;
+}
 
 .jumbotron {
 background: #2db9a7;
 }
 
 #event-form {
-    /*align-content: center;
-    justify-content: center;*/
+    align-content: center;
+    justify-content: right;
     border: solid 2px#2db9a7;
     border-radius: 5px;
-    margin-left: 100px;
-    margin-right: 100px;
+    /*margin-left: 100px;
+    margin-right: 100px;*/
 }
 
-/*.card-body {
+.card-body {
     align-content: center;
     justify-content: center;
 }
 
 .card {
     align-content: center;
-    justify-content: center;
-}*/
+    justify-content: right;
+}
 
 #input{
     align-content: center;
@@ -33,4 +36,6 @@ background-color: #2db9a7;
 
 nav {
     background-color: #2db9a7;  
+    border: solid 1 px  #2db9a7;
+
 }

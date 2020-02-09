@@ -9,10 +9,12 @@
     <!-- jquery link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
 
 </head>
 
@@ -23,44 +25,50 @@
 
     <!-- category form -->
     <div id="buttonsizer">
-        <form id="social-form">
+        <div id="social-form">
             <div class="form-group">
                 <input type="text" class="form-control" id="user-issue-input" aria-describedby="userinputhelp"
                     placeholder="Enter Social Issue">
-        </form>
-
-    </div>
-
-    <br>
-
-    <!-- user zipcode form -->
-    <div id="inputsizer">
-        <form>
-            <div class="form-group">
-                <input type="number" class="form-control" id="user-zip" aria-describedby="zipcodehelp"
-                    placeholder="Enter Zipcode">
-                <br>
-                <input id="add-button" type="submit" value="Submit">
             </div>
-        </form>
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <!-- display for results from api request -->
-    <div id="results">
-        <div id="results-dump">
+            </form>
 
         </div>
-    </div>
 
-    <a href="event.html">Create Event</a>
-   
+        <br>
 
-    <script src="./app.js"></script>
+        <!-- user zipcode form -->
+        <div id="inputsizer">
+            <form>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="user-zip" aria-describedby="zipcodehelp"
+                        placeholder="Enter Zipcode">
+                    <br>
+                    <input id="add-button" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- display for results from api request -->
+        <div id="results">
+            <div id="results-dump">
+
+            </div>
+        </div>
+
+
+        <a href="event.html">Create Event</a>
+        <a href="current-events.html">Current Events</a>
+        <a href="group-add.html">Create Group</a>
+
+
+
+        <script src="javascript/config.js"></script>
+        <script src="./javascript/app.js"></script>
 </body>
 
 </html>

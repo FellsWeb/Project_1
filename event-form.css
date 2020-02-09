@@ -1,9 +1,6 @@
-
 * {
     box-sizing: border-box;
 }
-
-
 
 .jumbotron {
 background: #2db9a7;
@@ -19,17 +16,15 @@ background: #2db9a7;
 }
 
 .card-body {
-    align-content: center;
-    justify-content: center;
-    border: solid 2px#2db9a7;
-    border-radius: 5px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-
-    /*margin-left: 100px;
-    margin-right: 100px;*/
+    /*align-content: center;
+    justify-content: center;*/
+    border-color: darkred;
 }
 
+.card {
+    align-content: center;
+    justify-content: right;
+}
 
 #input{
     align-content: center;
@@ -38,21 +33,14 @@ background: #2db9a7;
 
 #submit {
 background-color: #2db9a7;
-border-radius: 5px;
 }
 
-nav {
+/*nav {
     background-color: #2db9a7;  
     border: solid 1 px  #2db9a7;
-}
 
-td {
-    border: 2px solid #2db9a7;
-    border-radius: 5px;
-    margin-left: 20px;
-}
+}*/
 
 tr {
-    border: none;
-    margin-bottom: 10px;
+    border-color: darkorange;
 }

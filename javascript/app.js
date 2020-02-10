@@ -1,14 +1,22 @@
+(function ($) {
+    $(function () {
+
+        $('.sidenav').sidenav();
+
+    }); // end of document ready
+})(jQuery); // end of jQuery name space
+
 let configAPI = config;
 firebase.initializeApp(configAPI);
 let database = firebase.database();
 
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     var userIssue = ""
     var userZipCode = ""
 
-    $("#add-button").on("click", function(event) {
+    $("#add-button").on("click", function (event) {
         event.preventDefault();
 
         userIssue = $("#user-issue-input").val().trim();
@@ -20,48 +28,75 @@ $(document).ready(function() {
 
 
 
+let userInput = {
+    eventName: "",
+    socialCause: "",
+    eventTime: 0,
+    eventDate: 0,
+    locationName: "",
+    hostName: "",
+}
 
-let eventName = "";
-let socialCause = "";
-let eventTime = 0;
-let eventDate = 0;
-let locationName = "";
 
 $("#submit").on("click", function (event) {
     event.preventDefault();
-    eventName = $("#eventName-input").val().trim();
-    socialCause = $("#socialcause-input").val().trim();
-    eventTime = $("#time-input").val().trim();
-    eventDate = $("#date-input").val().trim();
-    locationName =$("#location-input").val().trim();
+    userInput = {
+        eventName: $("#eventName-input").val().trim(),
+        socialCause: $("#socialcause-input").val().trim(),
+        eventTime: $("#time-input").val().trim(),
+        eventDate: $("#date-input").val().trim(),
+        locationName: $("#location-input").val().trim(),
+        hostName: $("#host-input").val().trim(),
+    }
+
 
     database.ref().push({
-        eventName: eventName,
-        socialCause: socialCause,
-        eventTime: eventTime,
-        eventDate: eventDate,
-        locationName: locationName,
-
+        userInput
     });
 
+    $("#eventName-input").val("");
+    $("#socialcause-input").val("");
+    $("#time-input").val("");
+    $("#date-input").val("");
+    $("#location-input").val("");
+    $("#host-input").val().trim();
 });
 
 
 database.ref().on("child_added", function (childSnapshot) {
     console.log(childSnapshot.val());
-    console.log(childSnapshot.val().eventName);
-    console.log(childSnapshot.val().socialCause);
-    console.log(childSnapshot.val().eventTime);
-    console.log(childSnapshot.val().eventDate);
-    console.log(childSnapshot.val().locationName);
 
-})
+    let newRow = $("<tr>").append(
+        $("<card-body>").append(
+            $("<td>").append(
+                $("<tr>").text("Event Name : " + childSnapshot.val().userInput.eventName),
+                $("<tr>").text("Hosted by : " + childSnapshot.val().userInput.hostName),
+            ))
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
+        /*$("<td>").text(childSnapshot.val(). userInput.hostName),
+        /*$("<td>").text(childSnapshot.val().userInput.socialCause), 
+        $("<td>").text(childSnapshot.val().userInput.eventTime),
+        $("<td>").text(childSnapshot.val().userInput.eventDate), 
+        $("<td>").text(childSnapshot.val().userInput.locationName),*/
+    );
 
-  $(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
+    $("#eventsTable > tbody").append(newRow);
+
+    $("#eventsTable tbody tr").on("click", function (event) {
+        console.log("clicked2");
+        event.preventDefault();
+        
+    })
+
+
+}), function (errorObject) {
+    console.log("The read failed: " + errorObject.code);
+}
+
+
+
+
+
+
+
+

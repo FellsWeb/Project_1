@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Current Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        media="screen,projection" />
+    <link href="css/event-form.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="teal lighten-3" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">N.O.W.</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="current-events.html">Current Events</a></li>
+                <li><a href="#">Current Groups</a></li>
+                <li><a href="event.html">Create Event</li></a>
+                <li><a href="group-add.html">Create Group</a></li>
+                <li><a href="index.html">Main Page</a></li>
+            </ul>
+
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="current-events.html">Current Events</a></li>
+                <li><a href="#">Current Groups</a></li>
+                <li><a href="event.html">Create Event</a></li>
+                <li><a href="group-add.html">Create Group</a></li>
+                <li><a href="index.html">Main Page</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+        </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text">Current Events</h1>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col sm6 m12">
+                    <div class="card-body center">
+                        <div class="row">
+                            <div class="col sm6 m12">
+                                <table class="table table-sm table-hover" id='eventsTable'>
+                                    <thead>
+                                        <tr class="teal lighten-2" id="header">
+                                            <th scope="col">Events</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="javascript/config.js"></script>
+    <script src="./javascript/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -8,63 +8,197 @@
     <title>N.O.W</title>
     <!-- jquery link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="./css/style.css">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        media="screen,projection" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
 
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">N.O.W</h1>
+    <!-- nav bar -->
+    <nav class="teal lighten-3" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="index.html" src="" class="brand-logo">N.O.W.</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="current-events.html">Current Events</a></li>
+                <li><a href="#">Current Groups</a></li>
+                <li><a href="event.html">Create Event</li></a>
+                <li><a href="group-add.html">Create Group</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="current-events.html">Current Events</a></li>
+                <li><a href="#">Current Groups</a></li>
+                <li><a href="event.html">Create Event</li></a>
+                <li><a href="group-add.html">Create Group</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+        </div>
+    </nav>
+
+
+
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Don't Wait, Get involved NOW!</h1>
+            <p>Enter your cause and your zipcode below!</p>
+        </div>
     </div>
 
-    <!-- category form -->
-    <div id="buttonsizer">
-        <div id="social-form">
-            <div class="form-group">
-                <input type="text" class="form-control" id="user-issue-input" aria-describedby="userinputhelp"
-                    placeholder="Enter Social Issue">
-            </div>
-            </form>
+    <!-- <p class="flow-text">I am Flow Text</p> -->
 
-        </div>
-
-        <br>
-
-        <!-- user zipcode form -->
-        <div id="inputsizer">
-            <form>
-                <div class="form-group">
-                    <input type="number" class="form-control" id="user-zip" aria-describedby="zipcodehelp"
-                        placeholder="Enter Zipcode">
-                    <br>
-                    <input id="add-button" type="submit" value="Submit">
+    <div class="container-news">
+        <div class="section">
+            <div class="row">
+                <div class="col sm6 m12">
+                    <div class="card-body center">
+                        <div class="row">
+                            <div class="col sm6 m12">
+                                <table class="table table-sm table-hover" id='newsTable'>
+                                    <thead>
+                                        <tr class="teal lighten-2" id="header">
+                                            <th scope="col">News Articles</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="news-rows"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
+    </div>
+    <!-- category form -->
+    <div class="container">
+        <div class="section">
+            <p>
+                <label>
+                    <input name="group1" type="radio"  id="news-button" value="News"/>
+                    <span>News Articles</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="group1" type="radio" id="events-button" value="Events"/>
+                    <span>Events</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input class="with-gap" name="group1" type="radio" id="groups-button" value="Groups" />
+                    <span>Groups</span>
+                </label>
+            </p>
+            <div class="row" id="input">
+                <div class="col s10 m12">
+                    <div class="row mx-auto">
+                        <div class="col s10 m12" id="user-form">
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown1' class='dropdown-content'>
+                                <li value="Bullying" id="bullying" class="dropdownchoice"><a href="#!" >Bullying</a></li>
+                                <li value="ClimateChange" id="climate-change" class="dropdownchoice"><a href="#!">Climate Change</a></li> 
+                                <li value="DomesticViolence" id="domestic-violence" class="dropdownchoice"><a href="#!" >Domestic Violence</a></li>
+                                <li value="GunControl" id="gun-control" class="dropdownchoice"><a href="#!">Gun Control</a></li>    
+                                <li value="Inequality" id="inequality" class="dropdownchoice"><a href="#!">Inequality</a></li>    
+                                <li value="MentalHealth" id="mental-health" class="dropdownchoice"><a href="#!" >Mental Health</a></li>
+                                <li value="womenRights" id="Women-Rights" class="dropdownchoice"><a href="#!">Women's Rights</a></li>                                
+                            </ul>
 
-        <br>
-        <br>
-        <br>
-        <br>
+                            <!-- Dropdown Trigger -->
+                            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select a category</a>
+                            <form role="form" id="zip-form">
+                                
 
-        <!-- display for results from api request -->
-        <div id="results">
-            <div id="results-dump">
+                                
+                                
+                                <div class="form-group-zip">
+                                    <br>
+                                    <div id="zip-holder">
+                                        <label for="zipcode-input">Zipcode</label>
+                                    <input class="form-control" id="user-zip" type="number">
+                                    </div>
+                                    
+                                </div>
 
+                                <br>
+
+
+                                </p>
+
+                                <button class=" btn btn default teal lighten-3" id="submit-button" type="submit"
+                                    >Submit</button>
+                            </form>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+        </div>
+    </div>
+
+
+    <!-- display for results from api request -->
+    <div id="map"></div>
+    
+    </div>
+    </div>
+
+
+    <footer class="page-footer teal lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">About Us</h5>
+                    <p class="grey-text text-lighten-4">N.O.W (Network of Outspokenness Worldwide) not only seeks to
+                        provide our users with
+                        awareness of the vast amount of social issues that impact our society daily, but also provide
+                        the tools necessary
+                        to get involved. Our team, "Coding-by-Parents", is comprised of parents seeking to become web
+                        developers, as well as help our community
+                        be part of impacting change at a social level. </p>
+                </div>
+
+                <div class="col l3 s12">
+                    <h5 class="white-text"></h5>
+                    <ul>
+                        <li><a class="white-text" href="#!"></a></li>
+                        <li><a class="white-text" href="#!"></a></li>
+                        <li><a class="white-text" href="#!"></a></li>
+                        <li><a class="white-text" href="#!"></a></li>
+                    </ul>
+                </div>
+
+                <div class="col l3 s12">
+                    <h5 class="white-text">Support</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Contact Us</a></li>
+                        <li><a class="white-text" href="#!">FAQs</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
 
 
 
-        <script src="javascript/config.js"></script>
-        <script src="./javascript/app.js"></script>
+        
+
+        
+        <script src="./config.js"></script>
+        <script src="./javascript/map.js"></script>
+        <script src='./javascript/app.js'></script>
+        
 </body>
 
 </html>

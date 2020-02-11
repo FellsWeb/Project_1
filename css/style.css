@@ -1,36 +1,52 @@
-.jumbotron {
-    display: block;
-    padding: 10px;
+#event-form {
+    align-content: center;
+    justify-content: right;
+    border: solid 2px#2db9a7;
+    border-radius: 5px;
+    /*margin-left: 100px;
+    margin-right: 100px;*/
+}
+
+#photo-1 {
     margin: auto;
-    text-align: center;
-    background: #ebebeb;
-    width: 750px;
 }
 
-#buttonsizer {
-    display: block;
-    margin: auto;
-    max-width: 750px;
+body, html {
+    height: 100%;
 }
 
-#form-group {
-    margin-top: 15px;
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/6.jpeg);
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-#inputsizer {
-    margin-top: 25px;
-    display: block;
-    margin: auto;
-    max-width: 750px;
-    position: fixed;
-    left: 584px;
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
-
-#results {
-    margin-top: 55px;
-    display: block;
-    margin: auto;
-    max-width: 750px;
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+ #map {
+  height: 100%;
 }
-
-
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         media="screen,projection" />
     <link href="css/event-form.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Scheherazade&display=swap" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
 
 </head>
 
-<body>
+<body id="current-events">
+
 
     <nav class="teal lighten-3" role="navigation">
         <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">N.O.W.</a>
@@ -28,6 +30,7 @@
 
 
             <ul id="nav-mobile" class="sidenav">
+
                 <li><a href="current-events.html">Current Events</a></li>
                 <li><a href="#">Current Groups</a></li>
                 <li><a href="event.html">Create Event</a></li>
@@ -37,30 +40,54 @@
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
         </div>
     </nav>
+  
     <p onclick=openMap()> Click me to view map with current events. </p>
     <div class="section no-pad-bot" id="index-banner">
-        <div class="container">
-            <br><br>
-            <h1 class="header center teal-text">Current Events</h1>
 
+        <div class="container">
+            <div class="row">
+                <div class="col sm12 l12">
+                    <h1 class="header center teal-text">Current Events</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay teal-text white-background">
+        <div class="popup-content" id="event-info">
+            <h2>Event Info</h2>
+            <button class="close teal lighten-2">Close</button>
+            <button class="open teal lighten-2" id = "attend-event">Attend Event</button>
+            <button class="open teal lighten-2">Guest List</button>
         </div>
     </div>
 
     <div class="container">
-        <div class="section">
-            <div class="row">
-                <div class="col sm6 m12">
-                    <div class="card-body center">
-                        <div class="row">
-                            <div class="col sm6 m12">
-                                <table class="table table-sm table-hover" id='eventsTable'>
-                                    <thead>
-                                        <tr class="teal lighten-2" id="header">
-                                            <th scope="col">Events</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                </table>
+        <div class="col sm6 l12">
+            <div class="card-body" id="currentEvents">
+                <div class="section">
+                    <div class="row text-center text-teal lighten-2">
+                        <div class="col sm6 l6">
+                            <h4>Get Involved!</h4>
+                            <!--Photo by Markus Spiske temporausch.com from Pexels-->
+                            <br>
+                            <img src="css/climate-small.jpg" alt="climate">
+                        </div>
+
+                        <div class="col sm12 l6">
+                            <div class="card-body center">
+                                <div class="row">
+                                    <div class="col center sm6 l12">
+                                        <table class="table table-sm table-hover" id='eventsTable'>
+                                            <thead>
+                                                <tr class="teal lighten-2" id="header">
+                                                    <th scope="col center">Events</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -71,11 +98,54 @@
     </div>
     </div>
 
-    <div id="map"></div>
 
-    
+
+
+
+    <footer class="page-footer teal lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">About Us</h5>
+                    <p class="grey-text text-lighten-4">N.O.W (Network of Outspokenness Worldwide) not only seeks to
+                        provide our users with
+                        awareness of the vast amount of social issues that impact our society daily, but also provide
+                        the tools necessary
+                        to get involved. Our team, "Coding-by-Parents", is comprised of parents seeking to become web
+                        developers, as well as help our community
+                        be part of impacting change at a social level. </p>
+                </div>
+
+                <div class="col l3 s12">
+                    <h5 class="white-text"></h5>
+                    <ul>
+                        <li><a class="white-text" href="#!"></a></li>
+                        <li><a class="white-text" href="#!"></a></li>
+                        <li><a class="white-text" href="#!"></a></li>
+                        <li><a class="white-text" href="#!"></a></li>
+                    </ul>
+                </div>
+
+                <div class="col l3 s12">
+                    <h5 class="white-text">Support</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Contact Us</a></li>
+                        <li><a class="white-text" href="#!">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="white-text teal-lighten-3">W.O.W. 2020</div>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./config.js"></script>
+    <script src="javascript/config.js"></script>
+    <script src="./javascript/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./javascript/map.js"></script>
     

@@ -7,16 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Scheherazade&display=swap" rel="stylesheet">
     <link href="css/event-form.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+    
     <title>Create Event Form</title>
 </head>
 
 <body>
-
     <nav class="teal lighten-3" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">N.O.W.</a>
+        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">N.O.W.</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="current-events.html">Current Events</a></li>
                 <li><a href="#">Current Groups</a></li>
@@ -37,12 +38,14 @@
     </nav>
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
-            <br><br>
             <h1 class="header center teal-text">Create Your Event</h1>
-
+            <div class="popup-overlay teal-text white-background" id= "overlay">
+                <div class="popup-content" id="alert">
+                    <button class="close teal lighten-2">Ok</button>
         </div>
     </div>
-
+<br>
+<br>
     <div class="container">
         <div class="section">
 
@@ -55,10 +58,24 @@
                                     <label for="eventName-input">Event Name</label>
                                     <input class="form-control" id="eventName-input" type="text">
                                 </div>
+                                
+                            
                                 <div class="form-group">
-                                    <label for="socialcause-input">Social Cause</label>
-                                    <input class="form-control" id="socialcause-input" type="text">
+                                    <div class="input-field col s12" id=socialcause-input> 
+                                        <select>
+                                          <option value="" disabled selected>Select a Category</option>
+                                          <option value="Bullying"><a href="#!" ></a>Bullying</a></option>
+                                          <option value="ClimateChange"><a href="#!">Climate Change</a></option>
+                                          <option value="DomesticViolence"><a href="#!" >Domestic Violence</a></option>
+                                          <option value="Gun Control"><a href="#!" >Gun Control</a></option>
+                                          <option value="Inequality"><a href="#!" >Inequality</a></option>
+                                          <option value="Mental Health"><a href="#!" >Mental Health</a></option>
+                                          <option value="Women's Rights"><a href="#!" >Women's Rights</a></option>
+                                        </select>
+                                        <label>Social Cause</label>
+                                      </div>
                                 </div>
+
                                 <div class="form-group">
                                     <label for="time-input">Time</label>
                                     <input class="form-control" id="time-input" type="text">
@@ -70,6 +87,10 @@
                                 <div class="form-group">
                                     <label for="location-input">Location</label>
                                     <input class="form-control" id="location-input" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address-input">Address</label>
+                                    <input class="form-control" id="address-input" type="text">
                                 </div>
                                 <div class="form-group">
                                     <label for="host-input">Hosted By: </label>
@@ -84,12 +105,11 @@
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
 
 
         </div>
     </div>
+    
     <footer class="page-footer teal lighten-4">
         <div class="container">
             <div class="row">
@@ -125,9 +145,15 @@
         </div>
         </div>
 
+        <div class="footer-copyright">
+            <div class="container">
+             <div class="white-text teal-lighten-3">W.O.W. 2020</div>
+            </div>
+          </div>
+        </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="./javascript/config.js"></script>
         <script src="./javascript/app.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

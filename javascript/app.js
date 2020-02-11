@@ -4,11 +4,6 @@ var database = firebase.database();
 var userZipCode = $("#user-zip").val();
 
 
-// Here we are building the URL we need to query the database
-
-
-
-
 // listening for what radio button is being selected
 // if it is the news button then it will hide the zipcode field
 $('input:radio').change(function () {
@@ -22,14 +17,6 @@ $('input:radio').change(function () {
 }
 );
 
-// var buttons = document.getElementsByClassName('dropdownchoice');
-//             for (var i=0 ; i < buttons.length ; i++){
-//               (function(index){
-//                 buttons[index].onclick = function(){
-//                   alert("I am button " + index);
-//                 };
-//               })(i)
-//             }
 
 
 
@@ -264,7 +251,6 @@ function openMap() {
 
 
 $(document).ready(function () {
-    var userIssue = ""
     var userZipCode = ""
 
     $('.container-news').hide()

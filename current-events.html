@@ -17,7 +17,7 @@
 <body>
 
     <nav class="teal lighten-3" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">N.O.W.</a>
+        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">N.O.W.</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="current-events.html">Current Events</a></li>
                 <li><a href="#">Current Groups</a></li>
@@ -37,6 +37,7 @@
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
         </div>
     </nav>
+    <p onclick=openMap()> Click me to view map with current events. </p>
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <br><br>
@@ -70,7 +71,14 @@
     </div>
     </div>
 
+    <div id="map"></div>
+
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="javascript/config.js"></script>
-    <script src="./javascript/app.js"></script>
+    <script src="./config.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./javascript/map.js"></script>
+    
+    
+
+    

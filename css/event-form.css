@@ -2,8 +2,10 @@
 * {
     box-sizing: border-box;
 }
-=======
-
+body {
+    
+    font-family: 'Scheherazade', serif;
+}
 
 .jumbotron {
 background: #2db9a7;
@@ -14,26 +16,24 @@ background: #2db9a7;
     justify-content: right;
     border: solid 2px#2db9a7;
     border-radius: 5px;
-    /*margin-left: 100px;
-    margin-right: 100px;*/
+}
+
+table {
+    border-radius: 5px;
 }
 
 .card-body {
-=======
-    /*align-content: center;
-    justify-content: center;*/
-    border: solid 2px#2db9a7;
-    border-radius: 5px;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-
-
-.card {
     align-content: center;
-    justify-content: right;
+    justify-content: center;
+    border: solid 1px#2db9a7;
+    border-bottom: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    background-color: white;
 }
+
 
 #input{
     align-content: center;
@@ -42,11 +42,100 @@ background: #2db9a7;
 
 #submit {
 background-color: #2db9a7;
+border-radius: 5px;
 }
 
 nav {
     background-color: #2db9a7;  
     border: solid 1 px  #2db9a7;
-
-
 }
+
+td {
+    border: 2px solid #2db9a7;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+tr {
+    border: none;
+    margin-bottom: 10px;
+}
+
+  
+  .popup-overlay {
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 3px solid #666666;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+  }
+  
+  .popup-overlay.active {
+    visibility: visible;
+    text-align: center;
+    position: relative;
+    border: 3px solid teal;
+    width: 100%;
+    height:75%;
+  }
+  
+  .popup-content {
+    /*Hides modal content when there is no "active" class */
+    visibility: hidden;
+  }
+  
+  .popup-content.active {
+    /*Shows modal content when "active" class is present */
+    visibility: visible;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    border: 3px solid teal;
+  }
+  
+  button {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 30px;
+    margin: .20rem;
+    font-size: 1rem;
+    color: black;
+    background: #ffffff;
+    border: 1px solid gainsboro;
+  }
+  
+  button:hover {
+    border: 1px solid #666666;
+    background: white;
+    color: #ffffff;
+  }
+
+  #overlay.active {
+      background-color: white;
+      visibility: visible;
+      text-align: center;
+      position: relative;
+      border: 3px solid teal;
+      width: 100%;
+      height:100%;
+  }
+
+
+  img {
+      width: 90%;
+      height: 90%;
+      border: 1px solid teal;
+      margin-left: 20px;
+  }
+
+  #currentEvents {
+      border-bottom: 1px solid teal;
+  }
+
+  h4 {
+      color: teal;
+      text-align:center ;
+  }
+

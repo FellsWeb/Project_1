@@ -7,6 +7,8 @@
 
 $(document).ready(function () {
     $('select').formSelect();
+    $('.dropdown-trigger').dropdown();
+
 });
 
 var configAPI = config;
@@ -375,7 +377,7 @@ database.ref().on("child_added", function (childSnapshot) {
 
         $('.container-news').hide()
 
-        $('.dropdown-trigger').dropdown();
+        
 
 
         $("#submit-button").on("click", function (event) {

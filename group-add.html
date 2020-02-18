@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Add Your Cause</title>
   <meta charset="utf-8">
@@ -8,71 +9,134 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Scheherazade&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    media="screen,projection" />
+  <link href="css/event-form.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
+
 <body>
 
-    <div class="container" id="body">
+  <nav class="teal lighten-3" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">N.O.W.</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="current-events.html">Current Events</a></li>
+        <li><a href="#">Current Groups</a></li>
+        <li><a href="event.html">Create Event</li></a>
+        <li><a href="group-add.html">Create Group</a></li>
+        <li><a href="index.html">Main Page</a></li>
+      </ul>
 
-        <div class="jumbotron" id="jumbotron2">
-            <h1 class="display-4 text-center">Create A Group</h1>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="current-events.html">Current Events</a></li>
+        <li><a href="#">Current Groups</a></li>
+        <li><a href="event.html">Create Event</li></a>
+        <li><a href="group-add.html">Create Group</a></li>
+        <li><a href="index.html">Main Page</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col sm12 l12">
+          <h1 class="header center teal-text">Create a Group</h1>
         </div>
-        <br>
-
-
-        <ul id="slide-out" class="sidenav">
-            <li><div class="user-view">
-              <div class="background">
-              </div>
-       
-             
-          </ul>
-  
-
-<div class="container mt-3">
-  <h3>Social Issue Progress</h3>
-  <p>Don't see the issue or cause that you are interested in learning more about or feel should be addressed? You're in the right place. We are motivated to creating positive change in the community and want all voices heard. Add your social issue/community awareness cause below and start your activism iniative with other concerned NOW Agents of Change.</p>
-  <p>Add your contact and user information below and we will follow up with instructions to assist with your goals.</p>
-
-
-  
-  <form action="/action_page.php">
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text">@</span>
-      </div>
-      <input type="text" class="form-control" placeholder="Username" id="usr" name="username">
-    </div>
-
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Your Email" id="mail" name="email">
-      <div class="input-group-append">
-        <span class="input-group-text">@example.com</span>
-      </div> <br />
-       
-     <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="What Issue Would You Like to Connect With Other NOW Agents of Change On" id="cause" name="Issue">
-            <div class="input-group-append">
-              <span class="input-group-text">Community Policing, Voting, etc. </span>
-     </div>
-
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
+  </div>
+  <div class="container mt-3">
+    <h3>Social Issue Progress</h3>
+    <p>Don't see the issue or cause that you are interested in learning more about or feel should be addressed?
+      You're in the right place. We are motivated to creating positive change in the community and want all voices
+      heard. Add your social issue/community awareness cause below and start your activism iniative with other
+      concerned NOW Agents of Change.</p>
+    <p>Add your contact and user information below and we will follow up with instructions to assist with your
+      goals.</p>
 
-<b>
-<b>
 
 
+    <form action="/action_page.php">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" id="usr" name="username">
+      </div>
 
-    <a href="index.html">Back to Main Page</a>
-</b>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Your Email" id="mail" name="email">
+        <div class="input-group-append">
+          <span class="input-group-text">@example.com</span>
+        </div> <br />
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control"
+            placeholder="What Issue Would You Like to Connect With Other NOW Agents of Change On" id="cause"
+            name="Issue">
+          <div class="input-group-append">
+            <span class="input-group-text">Community Policing, Voting, etc. </span>
+          </div>
+
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <b>
+    <b>
+
+    </b>
+
+    <br>
+    <br>
+    <footer class="page-footer teal lighten-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">About Us</h5>
+            <p class="grey-text text-lighten-4">N.O.W (Network of Outspokenness Worldwide) not only seeks to
+              provide our users with
+              awareness of the vast amount of social issues that impact our society daily, but also provide
+              the tools necessary
+              to get involved. Our team, "Coding-by-Parents", is comprised of parents seeking to become web
+              developers, as well as help our community
+              be part of impacting change at a social level. </p>
+          </div>
+
+          <div class="col l3 s12">
+            <h5 class="white-text"></h5>
+            <ul>
+              <li><a class="white-text" href="#!"></a></li>
+              <li><a class="white-text" href="#!"></a></li>
+              <li><a class="white-text" href="#!"></a></li>
+              <li><a class="white-text" href="#!"></a></li>
+            </ul>
+          </div>
+
+          <div class="col l3 s12">
+            <h5 class="white-text">Support</h5>
+            <ul>
+              <li><a class="white-text" href="#!">Contact Us</a></li>
+              <li><a class="white-text" href="#!">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="white-text teal-lighten-3">W.O.W. 2020</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  </html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="config.js"></script>
     <script src="./javascript/app.js"></script>
-
-</body>
-</html>

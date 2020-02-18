@@ -21,7 +21,6 @@ let userInput = {
     locationName: "",
     address: "",
     hostName: "",
-    /*guestsAttending: 0,*/
 }
 
 
@@ -35,7 +34,7 @@ $("#submit").on("click", function (event) {
         locationName: $("#location-input").val().trim(),
         address: $("#address-input").val().trim(),
         hostName: $("#host-input").val().trim(),
-        /*guestsAttending: $("#attend-event").val().trim(),*/
+        
 
     }
     console.log($('#socialcause-input :selected').text());
@@ -102,15 +101,6 @@ database.ref().on("child_added", function (childSnapshot) {
 }, function (errorObject) {
     console.log("The read failed: " + errorObject.code);
 });
-
-  /*$("#attend-event").on("click", function () {
-        guestsAttending++;
-        database.ref().push({
-            guestsAttending
-        })
-        $("#event-info").append("<p>" + "Number of Guests Attending; " + guestsAttending)
-        console.log(guestsAttending);
-    });*/
 
 
 

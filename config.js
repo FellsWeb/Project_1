@@ -7,8 +7,12 @@ var config = {
     messagingSenderId: "740349139329",
     appId: "1:740349139329:web:5df8edf8a9a54ef110f080",
     measurementId: "G-Q4LD3Q04YY"
-};
-
-var newsConfig = {
-    apiKey: "3666831d3f4548b8bd074a522057a9a6",
-  };
+    };
+  
+    var googleConfig = {
+      apiKey: "AIzaSyD3jDUDgfzipvUKQxXuGuZeSSBg5zYcaW4",
+    };
+  
+    var newsConfig = {
+      apiKey: "3666831d3f4548b8bd074a522057a9a6",
+    };
